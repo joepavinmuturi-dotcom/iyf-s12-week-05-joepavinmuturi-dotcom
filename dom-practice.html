@@ -9,6 +9,10 @@
         .container { padding: 20px; border: 1px solid #ccc; }
         .hidden { display: none; }
         .accent { color: #8e2a5b; }
+        .completed { text-decoration: line-through; color: gray; }
+        .error { border: 2px solid red; }
+        .error-msg { color: red; display: block; }
+        #grandparent, #parent, #child { padding: 12px; margin: 6px; border: 1px solid #999; }
     </style>
 </head>
 <body>
@@ -46,12 +50,39 @@
             <div id="unsafe"></div>
             <div id="safe"></div>
         </section>
+                <section id="counter-demo">
+            <h2>Click counter</h2>
+            <p>Count: <span id="count">0</span></p>
+            <button type="button" id="plus">+</button>
+            <button type="button" id="minus">-</button>
+            <button type="button" id="reset">Reset</button>
+        </section>
+
+        <section id="bubbling-demo">
+            <h2>Event bubbling</h2>
+            <div id="grandparent">Grandparent
+                <div id="parent">Parent
+                    <div id="child">Child</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="task-demo">
+            <h2>Delegated task list</h2>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="New task">
+                <button type="submit">Add</button>
+            </form>
+            <ul id="task-list">
+                <li><span>Learn the DOM</span> <button type="button" class="delete">Delete</button></li>
+            </ul>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026</p>
     </footer>
 
-    <script src="joep.js"></script>
+    <script src="dom.js"></script>
 </body>
 </html>
