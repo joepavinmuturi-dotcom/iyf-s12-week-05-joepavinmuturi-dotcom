@@ -3,7 +3,7 @@
 # Week 5: DOM Manipulation – Interactive To-Do List
 
 ## Author
-- **Name:** <Your Full Name>
+- **Name:** Joepavin Muturi
 - **GitHub:** [@joepavinmuturi-dotcom](https://github.com/joepavinmuturi-dotcom)
 - **Date:** November 11, 2026
 
@@ -39,7 +39,3 @@ Other files:
 
 ## Challenges Faced
 - Editing a task: the edit box lost focus when the list re-rendered, so I tracked an `editingId`, focused the input after each render, and guarded the `focusout` handler so Enter and Escape don't also trigger a save.
-- <Add one real problem of your own and how you fixed it>
-
-## Live Demo
-<GitHub Pages link, if you enable it>

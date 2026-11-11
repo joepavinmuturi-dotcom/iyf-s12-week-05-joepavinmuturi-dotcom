@@ -27,7 +27,7 @@ function createTodoElement(todo) {
     li.appendChild(checkbox);
 
     if (todo.id === editingId) {
-        // Step 5: draw an edit box instead of the text
+       
         const editInput = document.createElement("input");
         editInput.type = "text";
         editInput.className = "edit";
@@ -37,7 +37,7 @@ function createTodoElement(todo) {
     } else {
         const span = document.createElement("span");
         span.className = "todo-text";
-        span.textContent = todo.text; // textContent, NOT innerHTML
+        span.textContent = todo.text; 
         li.appendChild(span);
     }
 
@@ -60,7 +60,7 @@ function visibleTodos() {
 function render() {
     todoList.replaceChildren(...visibleTodos().map(createTodoElement));
 
-    // If a task is being edited, focus its input with the cursor at the end
+   
     const editInput = todoList.querySelector(".edit");
     if (editInput) {
         editInput.focus();
@@ -85,7 +85,7 @@ function addTodo(text) {
 }
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault(); // stop the browser from reloading the page
+    event.preventDefault(); 
     const text = input.value.trim();
 
     if (text === "") {
@@ -163,7 +163,7 @@ function startEditing(id) {
 function saveEdit(id, newText) {
     const text = newText.trim();
     const todo = todos.find((t) => t.id === id);
-    if (todo && text !== "") todo.text = text; // empty keeps the old text
+    if (todo && text !== "") todo.text = text; 
     editingId = null;
     render();
 }
